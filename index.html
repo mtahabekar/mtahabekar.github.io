@@ -1,534 +1,384 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tim J. Schoonbeek</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="academicons-1.9.4/css/academicons.css">
-    <link rel="icon" href="logos/headset.png">
-
-    <style>
-        .logo_header {
-            margin-top: 2em;
-            margin-left: 2em;
-        }
-
-        .publication {
-            border: 1px solid #ccc;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-            transition: box-shadow 0.3s ease-in-out;
-        }
-
-        .publication:hover {
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .publication .image {
-            margin-bottom: 0.5rem;
-            margin-right: 0.5rem;
-            /*border: 2px solid #ccc;*/
-            padding: 0.25rem;
-        }
-
-        .publication .image img {
-            width: 350px;
-        }
-
-        .publication .title {
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .publication .authors {
-            margin-bottom: 0.5rem;
-        }
-
-        .publication .links {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .publication .links a {
-            margin-right: 1rem;
-        }
-
-        @media screen and (min-width: 768px) {
-            .publication {
-                flex-direction: row;
-                align-items: flex-start;
-            }
-        }
-
-        .experience {
-            border: 1px solid #ccc;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-            transition: box-shadow 0.3s ease-in-out;
-        }
-
-        .experience:hover {
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .experience .title {
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .experience ul {
-            margin-left: 2em;
-        }
-
-        .venue {
-            margin: 1rem;
-            font-weight: bold;
-        }
-
-        .logo {
-            /*width: 125px;*/
-            height: 25px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .logo_colab img {
-            height: 50px;
-            margin-left: 3em;
-            margin-right: 3em;
-            margin-top: 1em;
-        }
-
-        .logo:hover {
-            transform: scale(1.025);
-        }
-
-        .float-left-child {
-            float: left;
-            margin: 1rem;
-        }
-
-        .image {
-            margin-bottom: 1rem;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: white;
-            height: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-            z-index: 1; /* Add z-index to make the navigation bar always on top */
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav li {
-            margin: 0 10px;
-        }
-
-        nav a {
-            color: #3B3B3B;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        main {
-            margin-top: 50px; /* Add margin to the top of the main content to prevent it from being covered by the navigation bar */
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taha Bekar | Robotics Software Engineer</title>
+    <meta name="description" content="Personal website of Taha Bekar, a robotics software engineer focused on perception, SLAM, LiDAR point cloud processing, sensor fusion, ROS, and autonomous systems.">
+    <meta property="og:title" content="Taha Bekar | Robotics Software Engineer">
+    <meta property="og:description" content="Robotics software engineering portfolio focused on perception, SLAM, LiDAR point cloud processing, sensor fusion, ROS, and autonomous systems.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/portfolio.css">
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#Pubs">Publication</a></li>
-        <li><a href="#Exp">Experiences</a></li>
-    </ul>
+<nav class="site-nav" aria-label="Primary navigation">
+    <a class="site-brand" href="#top">Taha Bekar</a>
+    <div class="site-nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+    </div>
 </nav>
 
-<section class="hero is-primary is-bold">
-    <div class="hero-body">
+<main id="top">
+    <section class="hero portfolio-hero">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-vcentered is-variable is-7">
+                    <div class="column is-two-thirds">
+                        <p class="eyebrow">Robotics Portfolio</p>
+                        <h1 class="title is-1">Taha Bekar</h1>
+                        <h2 class="subtitle is-4">Robotics Software Engineer | Perception | SLAM | Autonomous Systems</h2>
+                        <p class="hero-summary">
+                            M.S. student in Electrical, Computer, and Systems Engineering at Rensselaer Polytechnic Institute,
+                            focused on autonomy, robotics, perception, localization, and control.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="button is-link" href="mailto:mtahabekar@gmail.com">Email</a>
+                            <a class="button is-light" href="https://www.linkedin.com/in/taha-bekar" target="_blank" rel="noopener">LinkedIn</a>
+                            <a class="button is-light" href="https://github.com/mtahabekar" target="_blank" rel="noopener">GitHub</a>
+                            <a class="button is-light" href="assets/Taha_Bekar_CV.pdf" target="_blank" rel="noopener">Resume PDF</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <figure class="image-placeholder portrait-placeholder" role="img" aria-label="Portrait of Taha Bekar">
+                            <!-- Add profile photo at assets/images/profile.jpg. Suggested alt text: Portrait of Taha Bekar. -->
+                            <span>Profile image placeholder</span>
+                            <code>assets/images/profile.jpg</code>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container narrow">
+            <h2 class="title is-3">About</h2>
+            <p>
+                I am an M.S. student in Electrical, Computer, and Systems Engineering at Rensselaer Polytechnic
+                Institute, focused on autonomy, robotics, and control. My background includes a B.S. in Electrical
+                and Electronics Engineering from Middle East Technical University and hands-on work across robotic
+                perception, SLAM, localization, sensor fusion, ROS/ROS 2, NVIDIA Isaac Sim, LiDAR point cloud
+                processing, and autonomous systems.
+            </p>
+        </div>
+    </section>
+
+    <section class="section section-muted" id="research">
         <div class="container">
-            <div class="columns is-vcentered">
+            <div class="section-heading">
+                <p class="eyebrow">Research</p>
+                <h2 class="title is-3">Deformable Object Manipulation Research</h2>
+                <p class="subtitle is-6">Research Assistant, Rensselaer Polytechnic Institute | 2025 - Present</p>
+            </div>
+            <div class="content-card">
+                <ul>
+                    <li>Developed a real-time perception and state-estimation pipeline for planar deformable objects using an RGB-D camera, ArUco marker tracking, Kalman filtering, and ROS.</li>
+                    <li>Simulated deformable 2D linear objects with the Newton 1.0 Physics engine in NVIDIA Isaac Sim to improve sim-to-real consistency.</li>
+                    <li>Extended a ROS-based dual-arm manipulation framework using Kinova Gen2 manipulators for coordinated manipulation of flexible 2D materials.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">Experience</p>
+                <h2 class="title is-3">Engineering Experience</h2>
+            </div>
+
+            <article class="timeline-item">
+                <div class="timeline-meta">
+                    <p>Feb 2024 - Jun 2024</p>
+                    <p>Ankara, Turkey</p>
+                </div>
+                <div class="timeline-body">
+                    <h3 class="title is-4">Computer Vision / Machine Learning Engineer</h3>
+                    <p class="subtitle is-6">Kuartis</p>
+                    <ul>
+                        <li>Evaluated LiDAR point cloud registration algorithms including ICP, NDT, GICP, and FAST-GICP for SLAM pipelines and real-time mapping systems.</li>
+                        <li>Implemented LiDAR-IMU sensor fusion by combining LiDAR odometry with IMU odometry, evaluating tightly coupled and loosely coupled fusion strategies.</li>
+                        <li>Analyzed SLAM frameworks including LOAM, LIO-SAM, and FAST-LIO for localization accuracy and computational efficiency.</li>
+                        <li>Improved LIO-SAM localization accuracy by 6% by integrating GICP-based scan matching into the GTSAM factor-graph optimization framework.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="timeline-item">
+                <div class="timeline-meta">
+                    <p>Jul 2023 - Sep 2023</p>
+                    <p>Berlin, Germany</p>
+                </div>
+                <div class="timeline-body">
+                    <h3 class="title is-4">Software Engineer Intern</h3>
+                    <p class="subtitle is-6">GT-ARC Gemeinn&uuml;tzige GmbH, DAI Labor, TU Berlin</p>
+                    <ul>
+                        <li>Developed a LiDAR-based free parking space detection algorithm for autonomous vehicles using ROS, Autoware, and HD Maps.</li>
+                        <li>Implemented geometric intersection analysis between detected vehicles and parking regions.</li>
+                        <li>Achieved 86% free-space detection accuracy.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="timeline-item">
+                <div class="timeline-meta">
+                    <p>Jul 2022 - Aug 2022</p>
+                    <p>Istanbul, Turkey</p>
+                </div>
+                <div class="timeline-body">
+                    <h3 class="title is-4">Software Engineer Intern</h3>
+                    <p class="subtitle is-6">Analog Devices</p>
+                    <ul>
+                        <li>Implemented PWM controller firmware on a MAX32666 microcontroller using timer peripherals.</li>
+                        <li>Built a GUI interface for testing PWM signals and implemented unit tests using Google Test.</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="section section-muted" id="projects">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">Projects</p>
+                <h2 class="title is-3">Robotics and Software Projects</h2>
+            </div>
+            <div class="project-grid">
+                <article class="project-card">
+                    <figure class="image-placeholder project-image" role="img" aria-label="Placeholder image for deformable object manipulation research">
+                        <!-- Add project image at assets/images/deformable-manipulation.jpg. -->
+                        <span>Image placeholder</span>
+                        <code>assets/images/deformable-manipulation.jpg</code>
+                    </figure>
+                    <div class="project-content">
+                        <h3 class="title is-4">Deformable Object Manipulation</h3>
+                        <p>Real-time perception and state estimation for planar deformable objects, with simulation in NVIDIA Isaac Sim and dual-arm manipulation using Kinova Gen2 robots.</p>
+                        <div class="tags">
+                            <span class="tag">ROS</span>
+                            <span class="tag">RGB-D</span>
+                            <span class="tag">ArUco</span>
+                            <span class="tag">Kalman Filtering</span>
+                            <span class="tag">Isaac Sim</span>
+                            <span class="tag">Kinova Gen2</span>
+                        </div>
+                        <a class="project-link" href="projects/deformable-object-manipulation.html">Details</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <figure class="image-placeholder project-image" role="img" aria-label="Placeholder image for LiDAR-IMU SLAM and localization project">
+                        <!-- Add project image at assets/images/lidar-slam.jpg. -->
+                        <span>Image placeholder</span>
+                        <code>assets/images/lidar-slam.jpg</code>
+                    </figure>
+                    <div class="project-content">
+                        <h3 class="title is-4">LiDAR-IMU SLAM and Localization</h3>
+                        <p>Evaluation and improvement of LiDAR registration and SLAM pipelines, including ICP, NDT, GICP, FAST-GICP, LOAM, LIO-SAM, and FAST-LIO.</p>
+                        <div class="tags">
+                            <span class="tag">SLAM</span>
+                            <span class="tag">LiDAR</span>
+                            <span class="tag">IMU</span>
+                            <span class="tag">ICP</span>
+                            <span class="tag">GICP</span>
+                            <span class="tag">LIO-SAM</span>
+                            <span class="tag">FAST-LIO</span>
+                            <span class="tag">GTSAM</span>
+                        </div>
+                        <a class="project-link" href="projects/lidar-imu-slam.html">Details</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <figure class="image-placeholder project-image" role="img" aria-label="Placeholder image for autonomous UGV mapping system">
+                        <!-- Add project image at assets/images/ugv-mapping.jpg. -->
+                        <span>Image placeholder</span>
+                        <code>assets/images/ugv-mapping.jpg</code>
+                    </figure>
+                    <div class="project-content">
+                        <h3 class="title is-4">Autonomous UGV Mapping System</h3>
+                        <p>Converted a 2D LiDAR into a 3D scanning system using servo rotation and implemented OctoMap mapping with ICP registration and AMCL localization in ROS.</p>
+                        <div class="tags">
+                            <span class="tag">ROS</span>
+                            <span class="tag">OctoMap</span>
+                            <span class="tag">ICP</span>
+                            <span class="tag">AMCL</span>
+                            <span class="tag">2D LiDAR</span>
+                            <span class="tag">3D Mapping</span>
+                        </div>
+                        <a class="project-link" href="projects/ugv-mapping.html">Details</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <figure class="image-placeholder project-image" role="img" aria-label="Placeholder image for LiDAR-based parking space detection project">
+                        <!-- Add project image at assets/images/parking-detection.jpg. -->
+                        <span>Image placeholder</span>
+                        <code>assets/images/parking-detection.jpg</code>
+                    </figure>
+                    <div class="project-content">
+                        <h3 class="title is-4">LiDAR-Based Parking Space Detection</h3>
+                        <p>Developed a LiDAR-based free parking space detection algorithm for autonomous vehicles using ROS, Autoware, HD Maps, and geometric intersection analysis.</p>
+                        <div class="tags">
+                            <span class="tag">ROS</span>
+                            <span class="tag">Autoware</span>
+                            <span class="tag">LiDAR</span>
+                            <span class="tag">HD Maps</span>
+                            <span class="tag">Autonomous Driving</span>
+                        </div>
+                        <a class="project-link" href="projects/parking-space-detection.html">Details</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <figure class="image-placeholder project-image" role="img" aria-label="Placeholder image for lane detection system">
+                        <!-- Add project image at assets/images/lane-detection.jpg. -->
+                        <span>Image placeholder</span>
+                        <code>assets/images/lane-detection.jpg</code>
+                    </figure>
+                    <div class="project-content">
+                        <h3 class="title is-4">Lane Detection System</h3>
+                        <p>Implemented a classical computer-vision lane detection pipeline using Canny edge detection and Hough transform.</p>
+                        <div class="tags">
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Canny</span>
+                            <span class="tag">Hough Transform</span>
+                            <span class="tag">Python/OpenCV</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <figure class="image-placeholder project-image" role="img" aria-label="Placeholder image for FPGA network QoS controller">
+                        <!-- Add project image at assets/images/fpga-qos-controller.jpg. -->
+                        <span>Image placeholder</span>
+                        <code>assets/images/fpga-qos-controller.jpg</code>
+                    </figure>
+                    <div class="project-content">
+                        <h3 class="title is-4">FPGA Network QoS Controller</h3>
+                        <p>Implemented a priority-based packet scheduling system in Verilog for network quality-of-service control.</p>
+                        <div class="tags">
+                            <span class="tag">Verilog</span>
+                            <span class="tag">FPGA</span>
+                            <span class="tag">Packet Scheduling</span>
+                            <span class="tag">Digital Design</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="education">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">Education</p>
+                <h2 class="title is-3">Academic Background</h2>
+            </div>
+            <div class="columns is-variable is-5">
                 <div class="column">
-                    <h1 class="title">
-                        Tim J. Schoonbeek
-                    </h1>
-                    <h2 class="subtitle">
-                        Computer Vision PhD Candidate --
-                        <a href="mailto:t.j.schoonbeek@tue.nl">t.j.schoonbeek@gmail.com</a> --
-                        <a href="mailto:t.j.schoonbeek@tue.nl">t.j.schoonbeek@tue.nl</a>
-                    </h2>
+                    <article class="content-card equal-height">
+                        <h3 class="title is-4">Rensselaer Polytechnic Institute</h3>
+                        <p class="subtitle is-6">M.S. Electrical, Computer, and Systems Engineering</p>
+                        <p>Troy, NY | 2024 - May 2026</p>
+                        <p>Focus: Autonomy, Robotics, and Control</p>
+                    </article>
+                </div>
+                <div class="column">
+                    <article class="content-card equal-height">
+                        <h3 class="title is-4">Middle East Technical University</h3>
+                        <p class="subtitle is-6">B.S. Electrical and Electronics Engineering</p>
+                        <p>Ankara, Turkey | 2018 - 2024</p>
+                        <p>GPA: 3.56 / 4.00</p>
+                    </article>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="logo_header">
-    <div class="container">
-        <div class="columns is-vcentered">
-            <div class="logo_colab">
-                <img src="logos/microsoft_square.png">
+    <section class="section section-muted" id="skills">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">Technical Skills</p>
+                <h2 class="title is-3">Tools and Focus Areas</h2>
             </div>
-            <div class="logo_colab">
-                <img src="logos/asml.png">
-            </div>
-            <div class="logo_colab">
-                <img src="logos/tue.png">
-            </div>
-<!--            <div class="logo_colab">-->
-<!--                <img src="logos/hri.png">-->
-<!--            </div>-->
-            <!-- Add more logos as needed -->
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <div class="columns">
-            <div class="column is-one-third">
-                <figure class="image">
-                    <img src="TimSchoonbeek.jpg">
-                </figure>
-                <h3 class="title is-3">About me</h3>
-                <p>Passionate about (egocentric) procedure understanding, computer vision, augmented reality,
-                    motorcycles, and learning Portuguese.</p>
-                <div class="parent">
-                    <div class="child float-left-child">
-                        <a href="https://scholar.google.com/citations?user=h_YDH0YAAAAJ" target="_blank">
-                            <img src="logos/scholar.png" alt="Scholar" class="logo">
-                        </a>
-                    </div>
-                    <div class="child float-left-child">
-                        <a href="https://www.linkedin.com/in/timschoonbeek" target="_blank">
-                            <img src="logos/linkedin.png" alt="LinkedIn" class="logo">
-                        </a>
-                    </div>
-                    <div class="child float-left-child">
-                        <a href="Schoonbeek_CV.pdf" target="_blank">
-                            <img src="logos/resume.png" alt="LinkedIn" class="logo">
-                        </a>
-                    </div>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3>Programming</h3>
+                    <p>Python, C++, C, MATLAB</p>
+                </div>
+                <div class="skill-group">
+                    <h3>Robotics</h3>
+                    <p>ROS, ROS 2, SLAM, NVIDIA Isaac Sim, Gazebo, Motion Planning, Localization, Kinematics</p>
+                </div>
+                <div class="skill-group">
+                    <h3>Perception</h3>
+                    <p>Computer Vision, LiDAR Point Cloud Processing</p>
+                </div>
+                <div class="skill-group">
+                    <h3>Libraries</h3>
+                    <p>PCL, OpenCV, PyTorch, NumPy</p>
+                </div>
+                <div class="skill-group">
+                    <h3>Tools</h3>
+                    <p>Linux, Git, Docker</p>
+                </div>
+                <div class="skill-group">
+                    <h3>Relevant Coursework</h3>
+                    <p>Safe Autonomy, Computational Vision, Machine Learning, Robotics II, Computational Optimization</p>
                 </div>
             </div>
-            <div class="column is-two-thirds">
-                <h3 class="title is-3" id="Pubs">Publications</h3>
-                <section class="publication">
-                    <div class="column is-one-third">
-                        <div class="image">
-                            <img src="publications/state_reg_teaser.png">
-                        </div>
-                    </div>
-                    <div class="details">
-                        <a href="state_rec.html" target="_blank">
-                            <h4 class="title is-4">Supervised Representation Learning towards Generalizable Assembly
-                                State Recognition</h4>
-                            <p class="authors"><u>Tim J. Schoonbeek</u>, Goutham Balachandran, Hans Onvlee, Tim
-                                Houben, Shao-Hsuan Hung, Jacek Kustra, Peter H.N. de With, Fons van der Sommen</p>
-                            <p class="venue">IEEE Robotics and Automation Letters (RA-L)</p>  <!-- TODO: fill this field -->
-                            <div class="links">
-                                <p><span class="icon"><i class="ai ai-ieee"></i></span><a
-                                        href="https://doi.org/10.1109/LRA.2024.3468157" target="_blank">IEEE
-                                    proceedings</a></p>
-                                <p><span class="icon"><i class="ai ai-arxiv"></i></span><a
-                                        href="https://arxiv.org/abs/2408.11700" target="_blank">arXiv</a>
-                                </p>
-                                <p><span class="icon"><i class="fab fa-github"></i></span><a
-                                        href="https://github.com/TimSchoonbeek/AssemblyStateRecognition" target="_blank">Github</a>
-                                </p>
-                                <p><span class="icon"><i class="ai ai-open-access"></i></span>
-                                    <a href="https://doi.org/10.4121/611adbc7-7935-43a6-8c3f-b2260a508e73" target="_blank" class="text">Data</a></p>
-                            </div>
-                        </a>
-                    </div>
-                </section>
-                <section class="publication">
-                    <div class="column is-one-third">
-                        <div class="image">
-                            <img src="publications/error_seg_architecture.png">
-                        </div>
-                    </div>
-                    <div class="details">
-                        <a href="error_seg.html" target="_blank">
-                            <h4 class="title is-4">Find the Assembly Mistakes: Error Segmentation for Industrial
-                                Applications</h4>
-                            <p class="authors">Dan Lehman*, <u>Tim J. Schoonbeek</u>*, Shao-Hsuan Hung, Jacek Kustra,
-                                Peter H.N. de With, Fons van der Sommen <br>
-                                *equal contribution</p>
-                            <p class="venue">ECCV 2024 (Vision-based InduStrial InspectiON)</p>
-                            <div class="links">
-                                <p><span class="icon"><i class="ai ai-arxiv"></i></span><a
-                                        href="https://arxiv.org/abs/2408.12945" target="_blank">arXiv</a>
-                                </p>
-<!--                                <p><span class="icon"><i class="fab fa-github"></i></span><a-->
-<!--                                        href="" target="_blank">Github</a> &lt;!&ndash; TODO: fill this field &ndash;&gt;-->
-<!--                                </p>-->
-<!--                                <p><span class="icon"><i class="ai ai-open-access"></i></span><a-->
-<!--                            href="" target="_blank" class="text">Data</a></p> &lt;!&ndash; TODO: fill this field &ndash;&gt;-->
-                            </div>
-                        </a>
-                    </div>
-                </section>
-                <section class="publication">
-                    <div class="column is-one-third">
-                        <div class="image">
-                            <img src="publications/industreal.png">
-                        </div>
-                    </div>
-                    <div class="details">
-                        <a href="industreal.html" target="_blank">
-                            <h4 class="title is-4">IndustReal: A Dataset for Procedure Step Recognition Handling
-                                Execution Errors in Egocentric Videos in an Industrial-Like Setting</h4>
-                            <p class="authors"><u>Tim J. Schoonbeek</u>, Tim Houben, Hans Onvlee, Peter H.N. de With,
-                                Fons van der Sommen</p>
-                            <p class="venue">WACV 2024</p>
-                            <div class="links">
-                                <p><span class="icon"><i class="ai ai-arxiv"></i></span><a
-                                        href="https://arxiv.org/abs/2310.17323" target="_blank">arXiv</a>
-                                </p>
-                                <p><span class="icon"><i class="ai ai-ieee"></i></span><a
-                                        href="https://doi.org/10.1109/WACV57701.2024.00431" target="_blank">IEEE
-                                    proceedings</a></p>
-                                <p><span class="icon"><i class="fab fa-github"></i></span><a
-                                        href="https://github.com/TimSchoonbeek/IndustReal" target="_blank">Github</a>
-                                </p>
-                                <p><span class="icon"><i class="ai ai-open-access"></i></span><a
-                            href="https://data.4tu.nl/datasets/b008dd74-020d-4ea4-a8ba-7bb60769d224" target="_blank" class="text">Data</a></p>
-                            </div>
-                        </a>
-                    </div>
-                </section>
-                <section class="publication">
-                    <div class="column is-one-third">
-                        <div class="image">
-                            <img src="publications/beyondAR.png">
-                        </div>
-                    </div>
-                    <div class="details">
-                        <a href="beyondAR.html" target="_blank">
-                            <h4 class="title is-4">Beyond Action Recognition: Extracting Meaningful Information from
-                                Procedure Recordings</h4>
-                            <p class="authors"><u>Tim J. Schoonbeek</u>, Hans Onvlee, Pierluigi Frisco, Peter H.N. de
-                                With, Fons van der Sommen</p>
-                            <p class="venue">IEEE VR 2023 (short paper)</p>
-                            <div class="links">
-                                <p><span class="icon"><i class="ai ai-ieee"></i></span><a
-                                        href="https://ieeexplore.ieee.org/abstract/document/10108640" target="_blank">IEEE
-                                    proceedings</a></p>
-                            </div>
-                        </a>
-                    </div>
-                </section>
-                <section class="publication">
-                    <div class="column is-one-third">
-                        <div class="image">
-                            <img src="publications/automaticlogging.png">
-                        </div>
-                    </div>
-                    <div class="details">
-                        <a href="automaticlogging.html" target="_blank">
-                            <h4 class="title is-4">Augmented Reality for Automatically Generating Robust Manufacturing
-                                and Maintenance Logs</h4>
-                            <p class="authors"><u>Tim J. Schoonbeek</u>, Pierluigi Frisco, Hans Onvlee, Peter H.N. de
-                                With, Fons van der Sommen</p>
-                            <p class="venue">London Imaging Meeting 2022 (oral presentation)</p>
-                            <div class="links">
-                                <p><span class="icon"><i class="ai ai-archive"></i></span><a
-                                        href="https://library.imaging.org/lim/articles/3/1/15" target="_blank">Publication</a>
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </section>
-                <section class="publication">
-                    <div class="column is-one-third">
-                        <div class="image">
-                            <img src="publications/risknet.png">
-                        </div>
-                    </div>
-                    <div class="details">
-                        <a href="risknet.html" target="_blank">
-                            <h4 class="title is-4">Learning to Predict Collision Risk from Simulated Video Data</h4>
-                            <p class="authors"><u>Tim J. Schoonbeek</u>, Fabrizio J. Piva, Hamid R. Abdolhay, Gijs
-                                Dubbelman</p>
-                            <p class="venue">IEEE IV 2022 (single track oral presentation)</p>
-                            <div class="links">
-                                <!--                <p><span class="icon"><i class="ai ai-arxiv"></i></span><a href="arxiv" target="_blank">arXiv</a></p>-->
-                                <p><span class="icon"><i class="ai ai-ieee"></i></span><a
-                                        href="https://ieeexplore.ieee.org/abstract/document/9827228" target="_blank">IEEE
-                                    proceedings</a></p>
-                            </div>
-                        </a>
-                    </div>
-                </section>
+        </div>
+    </section>
+
+    <section class="section" id="honors">
+        <div class="container narrow">
+            <h2 class="title is-3">Honors</h2>
+            <ul class="honors-list">
+                <li>High Honor Student - Middle East Technical University</li>
+                <li>1st Place - Istanbul Technical University Robot Olympics (ITURO)</li>
+                <li>Ranked 1367 / 2,000,000 - Turkish National University Entrance Exam</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section section-muted" id="resume">
+        <div class="container narrow">
+            <h2 class="title is-3">Resume</h2>
+            <p>
+                Download the current resume as a PDF. The deployed file should live at
+                <code>assets/Taha_Bekar_CV.pdf</code>.
+            </p>
+            <p class="section-action">
+                <a class="button is-link" href="assets/Taha_Bekar_CV.pdf" target="_blank" rel="noopener">Download Resume</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container narrow">
+            <h2 class="title is-3">Contact</h2>
+            <div class="contact-list">
+                <p><strong>Email:</strong> <a href="mailto:mtahabekar@gmail.com">mtahabekar@gmail.com</a> | <a href="mailto:bekarm@rpi.edu">bekarm@rpi.edu</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+18382620019">+1 (838) 262 0019</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/taha-bekar" target="_blank" rel="noopener">linkedin.com/in/taha-bekar</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/mtahabekar" target="_blank" rel="noopener">github.com/mtahabekar</a></p>
             </div>
         </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>&copy; 2026 Taha Bekar</p>
     </div>
-</section>
-
-
-<section class="section">
-    <div class="container">
-        <div class="columns">
-            <div class="column is-full">
-                <h3 class="title is-3" id="Exp">Experience</h3>
-                <section class="publication">
-                    <div class="column is-one-third">
-                        <div class="image">
-                            <img src="logos/microsoft.png">
-                        </div>
-                    </div>
-                    <div class="details">
-                        <h4 class="title is-4">Research Intern, <i>Microsoft Research Redmond</i></h4>
-                        <h6 class="title is-6">June 2025 - Sept. 2025</h6>
-                        <ul style="list-style-type:circle">
-                            <li>Research group: Interactive Multimodal AI Systems</li>
-                            <li>Developing real-time multimodal systems with LLM-powered perception to create benchmarks for situated intelligence for task assistance.</li>
-                            <li>Building models of social cues (turn-taking, engagement, attention) from large datasets while collaborating with cross-disciplinary teams.</li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="publication">
-                    <div class="column is-one-third">
-                        <div class="image">
-                            <img src="logos/cambo.jpg">
-                        </div>
-                    </div>
-                    <div class="details">
-                        <h4 class="title is-4">Visiting Doctoral Student, <i>University of Cambridge</i></h4>
-                        <h6 class="title is-6">Oct. 2024 - March 2025 (6 months)</h6>
-                        <ul style="list-style-type:circle">
-                            <li>Conducting research on enhancing collaboration between human operators and computer
-                                vision (quality inspection) algorithms in industrial settings, with a focus on augmented
-                                reality applications.</li>
-                            <li>Supervision of dr. Slawomir Tadeja and dr. Thomas Bohné with the
-                                <a href="https://cyberhuman.io/" target="_blank">Cyber-Human Lab</a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="publication">
-                    <div class="column is-one-third">
-                        <div class="image">
-                            <img src="logos/asml.png">
-                        </div>
-                        <div class="image">
-                            <img src="logos/tue.png">
-                        </div>
-                    </div>
-                    <div class="details">
-                        <h4 class="title is-4">PhD Candidate <br><i>ASML
-                            Research</i> and <i>Eindhoven University of Technology</i></h4>
-                        <h6 class="title is-6">Sept. 2021 - Oct. 2025 (estimated)</h6>
-                        <ul style="list-style-type:circle">
-                            <li>Project title: Advanced Augmented Reality Solutions for AI-based Servitization</li>
-                            <li>This PhD project aims at automatically extracting relevant and meaningful information
-                                from procedural actions within dynamic, high-tech manufacturing and maintenance
-                                environments. Given the wide variety of procedural actions and the significant downside
-                                of mistakes, a scalable and robust algorithm is required. We intend to deploy such
-                                algorithms on augmented reality (AR) devices to provide advanced support.
-                            </li>
-                            <li>Teaching a module on efficient video-based algorithms.
-                            </li>
-                            <li>Supervision of dr.ir. Fons van der Sommen (Associate Professor at TU/e), dr.ir. Peter de With (IEEE Life Fellow), 
-                                dr. Hans Onvlee (ASML Senior Researcher), dr. Jacek Kustra (Group Lead at ASML Research)
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="publication">
-                    <div class="column is-one-third">
-                        <div class="image">
-                            <img src="logos/tue.png">
-                        </div>
-                    </div>
-                    <div class="details">
-                        <h4 class="title is-4">M.Sc Mechanical Engineering - Automotive Technology <br><i>Eindhoven
-                            University of Technology</i></h4>
-                        <h6 class="title is-6">Feb. 2019 - May 2021</h6>
-                        <ul style="list-style-type:circle">
-                            <li>Focus on computer vision and autonomous vehicles</li>
-                            <li>Graduated with honors (GPA 4.0)</li>
-                            <li>Graduation project <a href="https://ieeexplore.ieee.org/abstract/document/9827228"
-                                                      target="_blank">published</a>, accepted as oral (5% of accepted
-                                papers) at IEEE IV 2022
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="publication">
-                    <div class="column is-one-third">
-                        <div class="image">
-                            <img src="logos/hri.png">
-                        </div>
-                    </div>
-                    <div class="details">
-                        <h4 class="title is-4">Graduate internship, <i>Honda Research Institute Europe</i></h4>
-                        <h6 class="title is-6">Mar. 2020 - July 2020</h6>
-                        <ul style="list-style-type:circle">
-                            <li>Subject: Interaction-Aware Trajectory Prediction for Highway Driving using Graph Neural
-                                Networks</li>
-                            <li>Real-time trajectory prediction of surrounding vehicles for risk estimation.</li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="publication">
-                    <div class="column is-one-third">
-                        <div class="image">
-                            <img src="logos/tue.png">
-                        </div>
-                    </div>
-                    <div class="details">
-                        <h4 class="title is-4">B.Sc Electrical Engineering - Automotive Technology <br><i>Eindhoven
-                            University of Technology</i></h4>
-                        <h6 class="title is-6">Sept. 2015 - Feb. 2019</h6>
-                        <ul style="list-style-type:circle">
-                            <li>Thesis: Depth Estimator from Disparity and Segmented Images (8.5/10)</li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- EMPTY PUBLICATION ENTRY: -->
-<!--<section class="publication">-->
-<!--  <div class="image">-->
-<!--    <img src="publications/image.png">-->
-<!--  </div>-->
-<!--  <div class="details">-->
-<!--    <h4 class="title is-4">Title</h4>-->
-<!--    <p class="authors">Authors</p>-->
-<!--    <p class="venue">Venue</p>-->
-<!--    <div class="links">-->
-<!--      <p><span class="icon"><i class="ai ai-arxiv"></i></span><a href="arxiv" target="_blank">arXiv</a></p>-->
-<!--      <p><span class="icon"><i class="fab fa-github"></i></span><a href="github" target="_blank">Github</a></p>-->
-<!--      <p><span class="icon"><i class="ai ai-ieee"></i></span><a href="ieee" target="_blank">IEEE proceedings</a></p>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-
+</footer>
 </body>
 </html>
