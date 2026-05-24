@@ -18,16 +18,16 @@ If Python is not available, any static file server will work because the site ha
 
 Deploy directly with GitHub Pages from the main branch. The homepage is `index.html`, and project pages live in `projects/`.
 
-## Assets To Add
+## Assets
 
-Add or replace these files before publishing:
+Current media wiring:
 
-- `assets/Taha_Bekar_CV.pdf`
-- `assets/images/profile.jpg`
-- `assets/images/deformable-manipulation.jpg`
-- `assets/images/lidar-slam.jpg`
-- `assets/images/ugv-mapping.jpg`
-- `assets/images/parking-detection.jpg`
+- `assets/Taha_Bekar_CV.pdf` is linked from the hero and resume sections.
+- `assets/images/deformable-manipulation.png` is used on the homepage and project detail page.
+- `https://youtu.be/qcqMBeMrgU0` is embedded for the autonomous UGV mapping project.
+- `assets/images/parking-detection.mp4` is used on the homepage and project detail page.
+- `assets/images/lidar-slam.jpg` still needs to be added.
+- `assets/images/profile.jpg` still needs to be added or exported from `assets/images/profile.HEIC`; JPG or PNG is recommended for browser compatibility.
 - Optional project images or videos for lane detection and FPGA QoS projects
 
-Image placeholders are already included in the HTML so the layout remains clean until real media is added.
+Remaining placeholders are kept in the HTML so the layout remains clean until real media is added.

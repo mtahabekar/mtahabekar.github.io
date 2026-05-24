@@ -48,8 +48,8 @@
                     </div>
                     <div class="column">
                         <figure class="image-placeholder portrait-placeholder" role="img" aria-label="Portrait of Taha Bekar">
-                            <!-- Add profile photo at assets/images/profile.jpg. Suggested alt text: Portrait of Taha Bekar. -->
-                            <span>Profile image placeholder</span>
+                            <!-- Export assets/images/profile.HEIC as assets/images/profile.jpg or .png before publishing. -->
+                            <span>Profile image pending web format</span>
                             <code>assets/images/profile.jpg</code>
                         </figure>
                     </div>
@@ -153,10 +153,8 @@
             </div>
             <div class="project-grid">
                 <article class="project-card">
-                    <figure class="image-placeholder project-image" role="img" aria-label="Placeholder image for deformable object manipulation research">
-                        <!-- Add project image at assets/images/deformable-manipulation.jpg. -->
-                        <span>Image placeholder</span>
-                        <code>assets/images/deformable-manipulation.jpg</code>
+                    <figure class="media-frame project-image">
+                        <img src="assets/images/deformable-manipulation.png" alt="Deformable object manipulation research setup">
                     </figure>
                     <div class="project-content">
                         <h3 class="title is-4">Deformable Object Manipulation</h3>
@@ -175,7 +173,7 @@
 
                 <article class="project-card">
                     <figure class="image-placeholder project-image" role="img" aria-label="Placeholder image for LiDAR-IMU SLAM and localization project">
-                        <!-- Add project image at assets/images/lidar-slam.jpg. -->
+                        <!-- Add project image at assets/images/lidar-slam.jpg when available. -->
                         <span>Image placeholder</span>
                         <code>assets/images/lidar-slam.jpg</code>
                     </figure>
@@ -197,10 +195,14 @@
                 </article>
 
                 <article class="project-card">
-                    <figure class="image-placeholder project-image" role="img" aria-label="Placeholder image for autonomous UGV mapping system">
-                        <!-- Add project image at assets/images/ugv-mapping.jpg. -->
-                        <span>Image placeholder</span>
-                        <code>assets/images/ugv-mapping.jpg</code>
+                    <figure class="media-frame project-image">
+                        <iframe
+                            src="https://www.youtube.com/embed/qcqMBeMrgU0"
+                            title="Autonomous UGV mapping system video"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
                     </figure>
                     <div class="project-content">
                         <h3 class="title is-4">Autonomous UGV Mapping System</h3>
@@ -218,10 +220,11 @@
                 </article>
 
                 <article class="project-card">
-                    <figure class="image-placeholder project-image" role="img" aria-label="Placeholder image for LiDAR-based parking space detection project">
-                        <!-- Add project image at assets/images/parking-detection.jpg. -->
-                        <span>Image placeholder</span>
-                        <code>assets/images/parking-detection.jpg</code>
+                    <figure class="media-frame project-image">
+                        <video controls preload="metadata" playsinline>
+                            <source src="assets/images/parking-detection.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </figure>
                     <div class="project-content">
                         <h3 class="title is-4">LiDAR-Based Parking Space Detection</h3>
