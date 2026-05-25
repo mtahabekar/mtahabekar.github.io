@@ -261,6 +261,16 @@ a:hover {
     margin-bottom: 2rem;
 }
 
+.project-media-stack {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.project-media-stack .project-detail-media {
+    margin-bottom: 0;
+}
+
 .project-detail h2 {
     margin-top: 2rem;
 }
