@@ -245,17 +245,6 @@ a:hover {
     width: 100%;
 }
 
-.fpga-media {
-    display: grid;
-    gap: 1px;
-    grid-template-rows: 0.38fr 0.62fr;
-}
-
-.fpga-media img {
-    background: #ffffff;
-    object-fit: contain;
-}
-
 .portrait-placeholder {
     aspect-ratio: 4 / 5;
     border-radius: 8px;
