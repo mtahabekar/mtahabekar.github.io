@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autonomous UGV Mapping System | Taha Bekar</title>
-    <meta name="description" content="Autonomous UGV mapping system project by Taha Bekar using ROS, OctoMap, ICP, AMCL, 2D LiDAR, and 3D mapping.">
+    <title>Autonomous Unmanned Ground Vehicle | Taha Bekar</title>
+    <meta name="description" content="Autonomous indoor UGV project by Taha Bekar using ROS, RViz, 2D LiDAR, 3D mapping, ICP, AMCL, motion planning, and wireless control.">
     <link rel="stylesheet" href="../css/bulma.min.css">
     <link rel="stylesheet" href="../css/portfolio.css">
 </head>
@@ -12,8 +12,13 @@
 <nav class="site-nav" aria-label="Project navigation">
     <a class="site-brand" href="../index.html#top">Taha Bekar</a>
     <div class="site-nav-links">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#research">Research</a>
+        <a href="../index.html#experience">Experience</a>
         <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#education">Education</a>
         <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#resume">Resume</a>
         <a href="../index.html#contact">Contact</a>
     </div>
 </nav>
@@ -23,8 +28,8 @@
         <div class="hero-body">
             <div class="container narrow">
                 <p class="eyebrow">Project</p>
-                <h1 class="title is-1">Autonomous UGV Mapping System</h1>
-                <p class="subtitle is-5">ROS, OctoMap, ICP, AMCL, 2D LiDAR, 3D Mapping</p>
+                <h1 class="title is-1">Autonomous Unmanned Ground Vehicle</h1>
+                <p class="subtitle is-5">ROS, RViz, 2D LiDAR, 3D Mapping, ICP, AMCL, Motion Planning, Wireless Control, UGV</p>
             </div>
         </div>
     </section>
@@ -44,36 +49,125 @@
             <div class="project-detail">
                 <h2 class="title is-3">Overview</h2>
                 <p>
-                    This project converted a 2D LiDAR into a 3D scanning system and used ROS-based mapping and
-                    localization methods for an autonomous UGV workflow.
+                    Autonomous UGV, designed and manufactured by Kolayd&#305;, is an indoor mobile robot that produces
+                    a 3D map of an indoor environment using 2D LiDAR scans. It localizes itself on the generated map
+                    and can autonomously navigate to user-selected target locations, including targets that are not
+                    restricted to line-of-sight.
                 </p>
 
-                <h2 class="title is-3">Technical Approach</h2>
+                <h2 class="title is-3">System Design</h2>
+                <p>The system is organized around three main parts: perception, action, and user interface.</p>
                 <ul>
-                    <li>Converted a 2D LiDAR into a 3D scanning system using servo rotation.</li>
-                    <li>Implemented OctoMap mapping for 3D occupancy mapping.</li>
-                    <li>Used ICP registration and AMCL localization in ROS.</li>
+                    <li>Perception includes LiDAR hardware, the mapping algorithm, and the localization algorithm.</li>
+                    <li>Action includes motion planning, motion control, communication between the robot and user computer, the microcontroller, chassis, motors and drivers, and battery.</li>
+                    <li>The user interface provides map visualization, robot state visualization, and a command interface through RViz.</li>
                 </ul>
 
-                <h2 class="title is-3">Tools and Technologies</h2>
-                <p>ROS, OctoMap, ICP, AMCL, 2D LiDAR, servo-based scanning, 3D mapping.</p>
-
-                <h2 class="title is-3">Results or Impact</h2>
+                <h2 class="title is-3">Perception, Mapping, and Localization</h2>
                 <p>
-                    The system combined low-cost 2D LiDAR scanning with ROS mapping and localization components to
-                    support autonomous UGV mapping.
+                    The robot uses 2D LiDAR scans as the primary sensing input for indoor mapping. The project converts
+                    these scans into a 3D map, uses ICP registration in the mapping workflow, and uses AMCL localization
+                    so the robot can estimate its pose on the generated map.
                 </p>
 
-                <h2 class="title is-3">My Contribution</h2>
+                <h2 class="title is-3">Motion Planning and Control</h2>
                 <p>
-                    I worked on the LiDAR scanning conversion, ROS mapping stack, ICP registration, and AMCL-based
-                    localization components.
+                    The UGV plans paths to user-selected targets and can navigate to targets beyond line of sight. The
+                    system includes autonomous path planning and motion control, accounts for stationary obstacles, and
+                    updates the path when a dynamic or previously unmapped obstacle is detected.
+                </p>
+
+                <h2 class="title is-3">User Interface</h2>
+                <p>
+                    The project provides a wireless RViz-based interface between the robot and the user computer. The
+                    interface displays the generated map, planned path, robot location, and robot state, and it gives
+                    the user a command interface for selecting target locations.
+                </p>
+
+                <h2 class="title is-3">Technical Specifications</h2>
+                <table class="table is-fullwidth spec-table">
+                    <tbody>
+                        <tr>
+                            <th>Robot dimensions</th>
+                            <td>20 cm diameter, 18 cm height</td>
+                        </tr>
+                        <tr>
+                            <th>Weight</th>
+                            <td>1 kg</td>
+                        </tr>
+                        <tr>
+                            <th>Robot height requirement</th>
+                            <td>&le; 30 cm</td>
+                        </tr>
+                        <tr>
+                            <th>Communication</th>
+                            <td>Wireless communication between robot and user computer</td>
+                        </tr>
+                        <tr>
+                            <th>User interface</th>
+                            <td>Interface for controlling the robot and visualizing map, path, and robot state</td>
+                        </tr>
+                        <tr>
+                            <th>LiDAR rotation precision</th>
+                            <td>Under 2 degrees</td>
+                        </tr>
+                        <tr>
+                            <th>Mapping</th>
+                            <td>Ability to merge map pieces from different grids; mapping error requirement &le; 10%</td>
+                        </tr>
+                        <tr>
+                            <th>Localization</th>
+                            <td>Localization error requirement &le; 5 cm</td>
+                        </tr>
+                        <tr>
+                            <th>Navigation</th>
+                            <td>Autonomous path planning and navigation; target-reaching error requirement &le; 20 cm</td>
+                        </tr>
+                        <tr>
+                            <th>Obstacle handling</th>
+                            <td>Stationary obstacles included in path planning; path updated when a dynamic obstacle is detected</td>
+                        </tr>
+                        <tr>
+                            <th>Operating environment</th>
+                            <td>Indoor environment up to 8 m&sup2; with moderate obstacles</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 class="title is-3">Results</h2>
+                <ul>
+                    <li>The robot can generate a 3D map from 2D LiDAR scans.</li>
+                    <li>The robot can localize itself on the generated map.</li>
+                    <li>The robot can navigate autonomously to target points in the room.</li>
+                    <li>The robot can adjust its path when a dynamic or previously unmapped obstacle is detected.</li>
+                    <li>The robot communicates wirelessly with a computer.</li>
+                    <li>The map, planned path, and robot location can be observed from the computer interface.</li>
+                    <li>The poster includes localization, mapping, and motion-planning test result plots.</li>
+                </ul>
+
+                <section class="project-poster">
+                    <h2 class="title is-3">Poster</h2>
+                    <div class="pdf-frame">
+                        <object data="../assets/Autonomous_Unmanned_Ground_Vehicle_Mehmet_Taha_Bekar%2C_Enfal_C%CC%A7abuk.pdf" type="application/pdf">
+                            <p>
+                                The poster PDF could not be displayed.
+                                <a href="../assets/Autonomous_Unmanned_Ground_Vehicle_Mehmet_Taha_Bekar%2C_Enfal_C%CC%A7abuk.pdf" target="_blank" rel="noopener">Download the poster</a>.
+                            </p>
+                        </object>
+                    </div>
+                    <p class="section-action">
+                        <a class="button is-link" href="../assets/Autonomous_Unmanned_Ground_Vehicle_Mehmet_Taha_Bekar%2C_Enfal_C%CC%A7abuk.pdf" target="_blank" rel="noopener">
+                            Open Poster PDF
+                        </a>
+                    </p>
+                </section>
+
+                <h2 class="title is-3">Back to Projects</h2>
+                <p class="section-action">
+                    <a class="button is-light" href="../index.html#projects">Back to Projects</a>
+                    <a class="button is-light" href="../index.html#top">Back to Home</a>
                 </p>
             </div>
-
-            <p class="section-action">
-                <a class="button is-light" href="../index.html#projects">Back to Projects</a>
-            </p>
         </div>
     </section>
 </main>

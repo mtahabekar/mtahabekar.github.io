@@ -279,6 +279,33 @@ a:hover {
     margin-left: 1.25rem;
 }
 
+.project-poster {
+    margin-top: 2rem;
+}
+
+.pdf-frame {
+    background: #f8fafc;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    min-height: 700px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.pdf-frame object,
+.pdf-frame iframe,
+.pdf-frame embed {
+    border: 0;
+    display: block;
+    height: 700px;
+    width: 100%;
+}
+
+.spec-table th,
+.spec-table td {
+    vertical-align: top;
+}
+
 .skills-grid {
     display: grid;
     gap: 1rem;
@@ -331,6 +358,16 @@ a:hover {
     .project-grid,
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .pdf-frame {
+        min-height: 500px;
+    }
+
+    .pdf-frame object,
+    .pdf-frame iframe,
+    .pdf-frame embed {
+        height: 500px;
     }
 }
 

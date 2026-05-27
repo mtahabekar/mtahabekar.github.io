@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taha Bekar | Robotics Software Engineer</title>
-    <meta name="description" content="Personal website of Taha Bekar, a robotics software engineer focused on perception, SLAM, LiDAR point cloud processing, sensor fusion, ROS, and autonomous systems.">
+    <meta name="description" content="Personal website of Taha Bekar, a robotics software engineer focused on perception, SLAM, LiDAR/IMU sensor fusion, ROS/ROS 2, simulation, and autonomous systems.">
     <meta property="og:title" content="Taha Bekar | Robotics Software Engineer">
-    <meta property="og:description" content="Robotics software engineering portfolio focused on perception, SLAM, LiDAR point cloud processing, sensor fusion, ROS, and autonomous systems.">
+    <meta property="og:description" content="Robotics software engineering portfolio focused on perception, SLAM, LiDAR/IMU sensor fusion, ROS/ROS 2, simulation, and autonomous systems.">
     <meta property="og:type" content="website">
     <link rel="stylesheet" href="css/bulma.min.css">
     <link rel="stylesheet" href="css/portfolio.css">
@@ -36,8 +36,10 @@
                         <h1 class="title is-1">Taha Bekar</h1>
                         <h2 class="subtitle is-4">Robotics Software Engineer | Perception | SLAM | Autonomous Systems</h2>
                         <p class="hero-summary">
-                            M.S. student in Electrical, Computer, and Systems Engineering at Rensselaer Polytechnic Institute,
-                            focused on autonomy, robotics, perception, localization, and control.
+                            I am a robotics software engineer with an M.S. in Computer and Systems Engineering from
+                            Rensselaer Polytechnic Institute, focused on autonomy, robotics, perception, localization,
+                            and control. My work spans LiDAR/IMU SLAM, deformable-object simulation, ROS/ROS 2 systems,
+                            NVIDIA Isaac Sim, computer vision, and autonomous navigation.
                         </p>
                         <div class="hero-actions">
                             <a class="button is-link" href="mailto:mtahabekar@gmail.com">Email</a>
@@ -60,11 +62,12 @@
         <div class="container narrow">
             <h2 class="title is-3">About</h2>
             <p>
-                I am an M.S. student in Electrical, Computer, and Systems Engineering at Rensselaer Polytechnic
-                Institute, focused on autonomy, robotics, and control. My background includes a B.S. in Electrical
-                and Electronics Engineering from Middle East Technical University and hands-on work across robotic
-                perception, SLAM, localization, sensor fusion, ROS/ROS 2, NVIDIA Isaac Sim, LiDAR point cloud
-                processing, and autonomous systems.
+                I am a robotics software engineer focused on perception, SLAM, localization, sensor fusion, and
+                simulation for autonomous systems. I completed my M.S. in Computer and Systems Engineering at
+                Rensselaer Polytechnic Institute, where I worked on deformable-object manipulation using ROS2,
+                Isaac Sim, NVIDIA Newton Style3D, and Control Barrier Function based obstacle-aware control. My
+                background also includes LiDAR point cloud registration, LiDAR-IMU fusion, autonomous driving
+                perception, UGV mapping/localization, and embedded/FPGA systems.
             </p>
         </div>
     </section>
@@ -74,13 +77,14 @@
             <div class="section-heading">
                 <p class="eyebrow">Research</p>
                 <h2 class="title is-3">Deformable Object Manipulation Research</h2>
-                <p class="subtitle is-6">Research Assistant, Rensselaer Polytechnic Institute | 2025 - Present</p>
+                <p class="subtitle is-6">Master&rsquo;s Project, Rensselaer Polytechnic Institute | 2025 - 2026</p>
             </div>
             <div class="content-card">
                 <ul>
-                    <li>Developed a real-time perception and state-estimation pipeline for planar deformable objects using an RGB-D camera, ArUco marker tracking, Kalman filtering, and ROS.</li>
-                    <li>Simulated deformable 2D linear objects with the Newton 1.0 Physics engine in NVIDIA Isaac Sim to improve sim-to-real consistency.</li>
-                    <li>Extended a ROS-based dual-arm manipulation framework using Kinova Gen2 manipulators for coordinated manipulation of flexible 2D materials.</li>
+                    <li>Developed a ROS2-compatible simulation and control framework for collaborative cloth manipulation using Isaac Sim and NVIDIA Newton Style3D.</li>
+                    <li>Integrated anisotropic cloth parameters, patch-based corner pinning, and ROS2 interfaces for cloth state, corner poses, and follower velocity commands.</li>
+                    <li>Implemented an obstacle-aware Control Barrier Function controller for follower-corner motion, evaluated through CBF on/off, resolution, speed, friction, and stiffness experiments.</li>
+                    <li>Prepared the framework for future perception-to-simulation calibration using RGB-D sensing and ArUco markers.</li>
                 </ul>
             </div>
         </div>
@@ -161,15 +165,17 @@
                         </iframe>
                     </figure>
                     <div class="project-content">
-                        <h3 class="title is-4">Deformable Object Manipulation</h3>
-                        <p>Real-time perception and state estimation for planar deformable objects, with simulation in NVIDIA Isaac Sim and dual-arm manipulation using Kinova Gen2 robots.</p>
+                        <h3 class="title is-4">Real-Time Cloth Simulation and Obstacle-Aware Control for Deformable Object Manipulation</h3>
+                        <p>Developed a ROS2-compatible simulation and control framework for collaborative cloth manipulation using Isaac Sim, NVIDIA Newton Style3D, anisotropic cloth parameters, and a Control Barrier Function safety layer for obstacle-aware follower-corner control.</p>
                         <div class="tags">
-                            <span class="tag">ROS</span>
-                            <span class="tag">RGB-D</span>
-                            <span class="tag">ArUco</span>
-                            <span class="tag">Kalman Filtering</span>
+                            <span class="tag">ROS2</span>
                             <span class="tag">Isaac Sim</span>
-                            <span class="tag">Kinova Gen2</span>
+                            <span class="tag">NVIDIA Newton</span>
+                            <span class="tag">Style3D</span>
+                            <span class="tag">Cloth Simulation</span>
+                            <span class="tag">Control Barrier Functions</span>
+                            <span class="tag">Deformable Object Manipulation</span>
+                            <span class="tag">Python</span>
                         </div>
                         <a class="project-link" href="projects/deformable-object-manipulation.html">Details</a>
                     </div>
@@ -213,15 +219,18 @@
                         </iframe>
                     </figure>
                     <div class="project-content">
-                        <h3 class="title is-4">Autonomous UGV Mapping System</h3>
-                        <p>Converted a 2D LiDAR into a 3D scanning system using servo rotation and implemented OctoMap mapping with ICP registration and AMCL localization in ROS.</p>
+                        <h3 class="title is-4">Autonomous Unmanned Ground Vehicle</h3>
+                        <p>Designed and built an autonomous indoor UGV that converts 2D LiDAR scans into a 3D map, localizes itself, plans paths beyond line-of-sight targets, updates its path around dynamic obstacles, and provides a wireless RViz-based user interface.</p>
                         <div class="tags">
                             <span class="tag">ROS</span>
-                            <span class="tag">OctoMap</span>
-                            <span class="tag">ICP</span>
-                            <span class="tag">AMCL</span>
+                            <span class="tag">RViz</span>
                             <span class="tag">2D LiDAR</span>
                             <span class="tag">3D Mapping</span>
+                            <span class="tag">ICP</span>
+                            <span class="tag">AMCL</span>
+                            <span class="tag">Motion Planning</span>
+                            <span class="tag">Wireless Control</span>
+                            <span class="tag">UGV</span>
                         </div>
                         <a class="project-link" href="projects/ugv-mapping.html">Details</a>
                     </div>
@@ -302,7 +311,7 @@
                 <div class="column">
                     <article class="content-card equal-height">
                         <h3 class="title is-4">Rensselaer Polytechnic Institute</h3>
-                        <p class="subtitle is-6">M.S. Electrical, Computer, and Systems Engineering</p>
+                        <p class="subtitle is-6">M.S. in Computer and Systems Engineering</p>
                         <p>Troy, NY | 2024 - May 2026</p>
                         <p>Focus: Autonomy, Robotics, and Control</p>
                     </article>
